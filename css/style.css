@@ -2,33 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-  width: 1920px;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   background-color: #fff;
-  overflow-x: hidden;
 }
 
 /* 포트폴리오 */
 .name {
   position: relative;
-  top: -1000px;
+  display: flex;
+  top: 80px;
   left: 20px;
+  z-index: 100;
 }
 .name p {
   font-size: 30px;
   font-weight: 500;
   color: #fff;
-  z-index: 1;
+  z-index: 101;
 }
 
 /* 마우스 이미지 */
 .cursor {
   position: absolute;
-  z-index: 1;
+  z-index: 1002;
 }
 
 .cursor img {
@@ -36,18 +39,23 @@ body {
   height: 70px;
 }
 
-/* 상단으로 이동 */
+/* 상단으로 이동 버튼 스타일 */
 .scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: fixed; /* 화면에 고정된 위치 */
+  bottom: 20px; /* 화면 하단에서 20px */
+  right: 20px; /* 화면 오른쪽에서 20px */
   cursor: pointer;
-  display: none; /* 기본적으로 숨김 상태로 설정 */
-  z-index: 2;
+  display: none; /* 기본적으로 숨김 상태 */
+  z-index: 1003; /* 다른 요소보다 위에 표시 */
+}
+
+.scroll-to-top img {
+  width: 40px; /* 버튼 이미지 크기 조정 */
+  height: auto; /* 비율에 맞게 높이 자동 조정 */
 }
 
 .scroll-to-top.show {
-  display: block;
+  display: block; /* .show 클래스가 추가되면 버튼 표시 */
 }
 
 /* 헤더 */
@@ -61,17 +69,23 @@ body {
   color: #fff;
   padding: 10px;
   text-align: center;
-  line-height: 120px;
 }
-
 .header p {
   position: relative;
-  top: 40px;
+  top: 0px;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.text {
+  position: relative;
+  top: -50px;
   left: 10px;
   text-align: center;
-  font-size: 30px;
+  font-size: 15px;
   font-weight: 530;
-  line-height: 45px;
+  line-height: 2;
 }
 /* 비디오 */
 .banner {
@@ -98,13 +112,20 @@ main {
 }
 .maimg {
   position: relative;
-  top: 100px;
-  left: 100px;
+  top: 200px;
+  left: 200px;
 }
 .maimg img {
-  width: 350px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   border-radius: 20px;
+}
+.maimg span {
+  position: relative;
+  top: 25px;
+  left: -250px;
+  color: #fff;
+  font-size: 20px;
 }
 
 /* 자기소개 */
@@ -122,26 +143,37 @@ main {
   padding: 10px; /* 섹션 간의 내부 여백 */
   box-sizing: border-box; /* 패딩이 포함된 너비를 계산 */
 }
-.introduction li,
 .eduation li,
 .experience li {
+  display: block;
+  align-items: center;
+  /* gap: 5px; */
+  margin-bottom: 15px;
+}
+/* 섹션 제목 간격 */
+.mimm h3 {
+  margin-bottom: 10px;
+}
+.mimm h5 {
+  margin-bottom: 2px;
+}
+.introduction {
+  position: relative;
+  top: -400px;
+  left: 40%;
+  color: #fff;
+  flex: content;
+}
+.introduction li {
   display: flex;
   align-items: center;
   gap: 5px; /* 이미지와 텍스트 사이의 간격 */
   margin-bottom: 10px;
 }
-/* 섹션 제목 간격 */
-h3 {
-  margin-bottom: 10px;
-}
-.introduction {
-  position: relative;
-  top: -350px;
-  left: 25%;
-  color: #fff;
-  flex: content;
-}
 .introduction p {
+  font-size: 20px;
+}
+.introduction span {
   font-size: 20px;
 }
 /* 이미지 크기 조정 */
@@ -153,30 +185,61 @@ h3 {
 }
 .skill {
   position: relative;
-  top: -360px;
+  top: -400px;
+  left: 20%;
   color: #fff;
-  gap: 10px; /* 이미지 사이의 간격 조절 */
+  gap: 15px; /* 이미지 사이의 간격 조절 */
   display: block;
 }
 .skill img {
   width: 50px;
   height: 50px;
 }
+.skillinner {
+  position: relative;
+  display: block;
+  top: -290px;
+  left: -345.5px;
+  gap: 15px; /* 이미지 사이의 간격 조절 */
+}
+/* .skillinner img {
+justify-content: center;
+} */
 .eduation {
   position: relative;
   color: #fff;
-  display: block;
+  top: -250px;
+  left: 40%;
+}
+.eduation p {
+  font-size: 20px;
+}
+.eduation span {
+  font-size: 13px;
 }
 .experience {
+  position: relative;
+  color: #fff;
+  top: -250px;
+  left: 20%;
+}
+.experience p {
+  font-size: 20px;
+}
+.experience span {
+  font-size: 13px;
 }
 
 /* 메뉴 */
 .navbar {
   background-color: #b1caed;
   overflow: hidden;
-  position: relative; /* 기본 위치 */
+  position: fixed; /* fixed로 변경 */
+  top: 0; /* 화면 상단에 고정 */
+  left: 0; /* 화면 왼쪽에 고정 */
   width: 100%;
-  transition: transform 0.5s ease-in-out; /* 슬라이드 효과를 위한 트랜지션 추가 */
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000; /* 메뉴바가 다른 요소 위에 오도록 설정 */
 }
 
 .navbar ul {
@@ -207,6 +270,7 @@ h3 {
   /* color: #ccc; */
 }
 
+/* 컨텐츠 */
 .sticky {
   position: fixed;
   top: 0;
@@ -216,7 +280,7 @@ h3 {
 }
 
 .slide-up {
-  transform: translateY(-100%); /* 요소를 위로 슬라이드 */
+  /* transform: translateY(-100%); */
 }
 
 .content {
@@ -224,23 +288,87 @@ h3 {
   overflow: hidden;
 }
 
-.section {
+#redesign {
   position: relative;
-  background-color: rgba(138, 231, 244, 0.5);
+  background-color: #7ca9e8;
+  display: flex;
   width: 100%;
   height: 100vh;
   margin: 20px 0;
+  justify-content: space-around;
+}
+#redesign h1 {
+  position: relative;
+  color: #fff;
+  top: 100px;
+  left: 40%;
+  font-size: 50px;
+}
+#redesign a {
+}
+.img-text img {
+  position: relative;
+  top: 250px;
+  left: -50%;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* 부드러운 확대 전환 효과 */
+}
+.img-text:hover img {
+  transform: scale(1.1); /* 호버 시 이미지 확대 */
 }
 
-.section span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 40px;
-  font-weight: bold;
-  font-size: 48px;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
-  color: #f5f5f5;
+.img-text span {
+  position: relative;
+  top: 290px;
+  left: -50%;
+  color: #fff;
+  font-size: 30px;
+  display: block;
+  /* align-items: center; */
+  text-align: center;
+}
+
+#appdesign {
+  position: relative;
+  background-color: #7ca9e8;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 20px 0;
+  justify-content: space-around;
+}
+#appdesign h1 {
+  position: relative;
+  color: #fff;
+  top: 100px;
+  left: 35%;
+  font-size: 50px;
+}
+.img-app img {
+  position: relative;
+  top: 250px;
+  left: -100%;
+  width: 300px;
+  height: 589px;
+  transition: transform 0.3s ease; /* 부드러운 확대 전환 효과 */
+}
+.img-app:hover img {
+  transform: scale(1.1); /* 호버 시 이미지 확대 */
+}
+.img-app span {
+  position: relative;
+  top: 50px;
+  left: -5%;
+  color: #fff;
+  font-size: 30px;
+  display: block;
+  /* align-items: center; */
+  /* text-align: center; */
+}
+
+#image {
+  display: none; /* 기본적으로 이미지를 숨깁니다. */
+  margin-top: 20px;
 }
