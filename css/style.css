@@ -85,7 +85,7 @@ body {
   text-align: center;
   font-size: 15px;
   font-weight: 530;
-  line-height: 2;
+  /* line-height: 15px; */
 }
 /* 비디오 */
 .banner {
@@ -294,7 +294,7 @@ justify-content: center;
   display: flex;
   width: 100%;
   height: 100vh;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   justify-content: space-around;
 }
 #redesign h1 {
@@ -349,7 +349,7 @@ justify-content: center;
 .img-app img {
   position: relative;
   top: 250px;
-  left: -100%;
+  left: -150px;
   width: 300px;
   height: 589px;
   transition: transform 0.3s ease; /* 부드러운 확대 전환 효과 */
@@ -360,15 +360,183 @@ justify-content: center;
 .img-app span {
   position: relative;
   top: 50px;
-  left: -5%;
+  left: -130px;
   color: #fff;
   font-size: 30px;
-  display: block;
   /* align-items: center; */
   /* text-align: center; */
 }
 
-#image {
-  display: none; /* 기본적으로 이미지를 숨깁니다. */
-  margin-top: 20px;
+#design {
+  position: relative;
+  background-color: #7ca9e8;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  /* margin: 10px 0; */
+  /* justify-content: space-around; */
+}
+#design h1 {
+  position: relative;
+  color: #fff;
+  top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+/* 위 */
+.img-inner {
+  position: relative;
+  top: 200px;
+  display: flex;
+}
+/* 이미지조정 */
+#image3 {
+  position: relative;
+  width: 25%;
+  height: auto;
+  left: -150px;
+  top: -20px;
+  display: none;
+  background-color: #fff;
+}
+#image1 {
+  position: relative;
+  width: 80%;
+  height: auto;
+  left: -50px;
+  top: -100px;
+  display: none;
+  background-color: #fff;
+}
+#image2 {
+  position: relative;
+  width: 150%;
+  height: auto;
+  left: -50px;
+  top: -100px;
+  display: none;
+  background-color: #fff;
+}
+#image4 {
+  position: relative;
+  width: 50%;
+  height: 10%;
+  top: 280px;
+  left: -700px;
+  display: none;
+  background-color: #fff;
+}
+#image5 {
+  position: relative;
+  width: 20%;
+  height: auto;
+  left: -230px;
+  top: -50px;
+  display: none;
+  background-color: #fff;
+}
+
+.img-A img {
+  position: relative;
+  left: 150px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+}
+.img-inner button {
+  position: relative;
+  /* display: block; */
+  top: 215px;
+  left: -90px;
+}
+.txt-container {
+  display: flex; /* 수평으로 나열하기 위해 flex 컨테이너 사용 */
+  position: relative; /* 부모 컨테이너의 위치 지정 */
+}
+
+.txt-p,
+.txt-s {
+  display: flex; /* 내부 요소들을 수평으로 배치 */
+  /* flex-direction: column; */
+  position: absolute; /* 개별 위치 조정 가능 */
+}
+
+.txt-p {
+  position: relative;
+  top: 200px; /* 상단 위치 */
+  left: 50px; /* 왼쪽 위치 */
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.p1 {
+  position: relative;
+  top: 280px;
+}
+
+.txt-s {
+  top: 200px; /* 상단 위치 */
+  left: 200px; /* 왼쪽 위치 */
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.s1 {
+  position: relative;
+  top: 300px;
+  left: -150px;
+}
+
+.txt-p p,
+.txt-s span {
+  margin: 0; /* 기본 여백 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+.txt-p p {
+  margin-right: 20px; /* 텍스트 간 간격 조정 */
+}
+
+.txt-s span {
+  margin-right: 20px; /* 텍스트 간 간격 조정 */
+}
+/* 위 끝 */
+
+/* 아래 */
+.img-innr {
+  position: relative;
+  display: flex;
+  top: 200px;
+}
+.img-b img {
+  position: relative;
+  left: 150px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+}
+.img-innr button {
+  position: relative;
+  /* display: block; */
+  top: 215px;
+  left: -90px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: white; /* 배경색을 흰색으로 설정 */
+  color: black; /* 글자색을 검정으로 설정 */
+  border: 1px solid black; /* 테두리를 검정색으로 설정 */
+  /* padding: 10px 20px; */
+  border-radius: 10px; /* 모서리를 둥글게 설정 */
+  font-size: 10px; /* 글자 크기 설정 */
+  cursor: pointer; /* 커서 모양을 포인터로 설정 */
+  outline: none; /* 포커스 시 생기는 외곽선 제거 */
+  transition: background-color 0.3s ease; /* 배경색 전환 효과 추가 */
+  text-align: center;
+}
+
+button:hover {
+  background-color: #f0f0f0; /* 마우스 오버 시 배경색을 약간 회색으로 변경 */
 }
