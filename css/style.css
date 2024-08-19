@@ -13,6 +13,11 @@ body {
   background-color: #fff;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 /* 포트폴리오 */
 .name {
   position: relative;
@@ -383,326 +388,389 @@ justify-content: center;
   text-align: center;
   font-size: 50px;
 }
-/* 위 */
-.img-inner {
-  position: relative;
-  top: 150px;
-  left: -50px;
-  display: flex;
+
+/* 첫 번째 이미지 */
+/* .first-image {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #fff;
+} */
+
+/* 두 번째 이미지 */
+/* .second-image {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #fff;
+} */
+
+/* 세 번째 이미지 */
+.third-image {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #fff;
 }
-/* 이미지조정 */
-/* #image3 {
+
+/* 모든 espoir 이미지를 위한 공통 스타일 */
+.espoir img {
+  transform: scale(0.13);
+  transform-origin: left top;
+  position: absolute;
+  /* top: -27%; */
+}
+
+/* 전체화면 이미지 스타일 */
+.fullscreen-image {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2450px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-image img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.espoir {
+  position: absolute;
+  top: 22%;
+  left: 40px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+
+.espoir:hover {
+  transform: scale(1.1);
+}
+
+.fullscreen-image {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.5s ease; /* 확대/축소 시 부드러운 전환 */
+}
+
+.fullscreen-image img {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(1); /* 기본 크기 (100%) */
+}
+
+.fullscreen-image.shrink img {
+  transform: scale(0.5); /* 축소된 크기 (50%) */
+}
+.first {
   position: relative;
-  width: 25%;
+  width: 2400px;
   height: auto;
-  left: -150px;
+  top: 0px;
+  left: -10px;
+}
+
+.img1 {
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first1 {
+  position: relative;
+  width: 350px;
+  height: auto;
+  top: 0px;
+  left: -20px;
+}
+
+.img1:hover {
+  transform: scale(1.1);
+}
+
+.img2 {
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first2 {
+  position: relative;
+  width: 350px;
+  height: auto;
+  top: 0px;
+  left: -20px;
+}
+.img2:hover {
+  transform: scale(1.1);
+}
+.img3 {
+  position: absolute;
+  top: 22%;
+  left: 62%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first3 {
+  position: relative;
+  width: 350px;
+  height: auto;
+  top: 0px;
+  left: -20px;
+}
+
+.img3:hover {
+  transform: scale(1.1);
+}
+
+.img4 {
+  position: absolute;
+  top: 22%;
+  left: 82%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first4 {
+  position: relative;
+  width: 350px;
+  height: auto;
+  top: 0px;
+  left: -20px;
+}
+.img4:hover {
+  transform: scale(1.1);
+}
+.img5 {
+  position: absolute;
+  top: 60%;
+  left: 40px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first5 {
+  position: relative;
+  width: 350px;
+  height: auto;
+  top: 0px;
+  left: -20px;
+}
+.img5:hover {
+  transform: scale(1.1);
+}
+.img6 {
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
+  background-color: #fff;
+}
+.first6 {
+  position: relative;
+  width: 350px;
+  height: auto;
   top: -20px;
-  display: none;
+  left: -25px;
+}
+.img6:hover {
+  transform: scale(1.1);
+}
+.img7 {
+  position: absolute;
+  top: 60%;
+  left: 42%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
   background-color: #fff;
 }
-#image1 {
+.first7 {
   position: relative;
-  width: 80%;
+  width: 350px;
   height: auto;
-  left: -50px;
-  top: -100px;
-  display: none;
+  top: 0px;
+  left: -20px;
+}
+.img7:hover {
+  transform: scale(1.1);
+}
+.img8 {
+  position: absolute;
+  top: 60%;
+  left: 62%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
   background-color: #fff;
 }
-#image2 {
+.first8 {
   position: relative;
-  width: 150%;
+  width: 400px;
   height: auto;
+  top: 0px;
   left: -50px;
-  top: -100px;
-  display: none;
+}
+.img8:hover {
+  transform: scale(1.1);
+}
+.img9 {
+  position: absolute;
+  top: 60%;
+  left: 82%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* 이미지가 부모 영역을 넘지 않도록 설정 */
+  border-radius: 50px;
+  transition: opacity 0.5s ease; /* opacity 변화에 부드러운 전환 추가 */
   background-color: #fff;
 }
-#image4 {
+.first9 {
   position: relative;
-  width: 50%;
-  height: 10%;
+  width: 150px;
+  height: auto;
+  top: 25px;
+  left: 75px;
+}
+.img9:hover {
+  transform: scale(1.1);
+}
+
+.txt1 {
+  position: relative;
+  top: 480px;
+  left: 80px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.txt2 {
+  position: relative;
+  top: 430px;
+  left: 24%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.txt3 {
+  position: relative;
+  top: 380px;
+  left: 44%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.txt4 {
+  position: relative;
+  top: 330px;
+  left: 64%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.txt5 {
+  position: relative;
   top: 280px;
-  left: -700px;
-  display: none;
-  background-color: #fff;
-}
-#image5 {
-  position: relative;
-  width: 10%;
-  height: auto;
-  left: -80px;
-  top: -80px;
-  display: none;
-  background-color: #fff;
-} */
-
-.img-A img {
-  position: relative;
-  left: 150px;
-  width: 250px;
-  height: 250px;
-  display: flex;
-}
-.img-inner button {
-  position: relative;
-  /* display: block; */
-  top: 215px;
-  left: -90px;
-}
-.txt-container {
-  display: flex; /* 수평으로 나열하기 위해 flex 컨테이너 사용 */
-  position: relative; /* 부모 컨테이너의 위치 지정 */
-}
-
-.txt-p,
-.txt-s {
-  display: flex; /* 내부 요소들을 수평으로 배치 */
-  /* flex-direction: column; */
-  position: absolute; /* 개별 위치 조정 가능 */
-}
-
-.txt-p {
-  position: relative;
-  /* top: 200px; */
-  left: 50px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-}
-.p1 {
-  position: relative;
-  top: 430px;
-  left: 50px;
-}
-.p2 {
-  position: relative;
-  top: 430px;
-  left: 320px;
-}
-.p3 {
-  position: relative;
-  top: 430px;
-  left: 515px;
-}
-.p4 {
-  position: relative;
-  top: 430px;
-  left: 780px;
-}
-.p5 {
-  position: relative;
-  top: 430px;
-  left: 1065px;
-}
-
-.txt-s {
-  /* top: 200px; */
-  left: 200px;
+  left: 84%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
-.s1 {
+.txt6 {
   position: relative;
-  top: 450px;
-  left: -100px;
-}
-.s2 {
-  position: relative;
-  top: 450px;
-  left: 83px;
-}
-.s3 {
-  position: relative;
-  top: 450px;
-  left: 220px;
-}
-.s4 {
-  position: relative;
-  top: 450px;
-  left: 490px;
-}
-.s5 {
-  position: relative;
-  top: 450px;
-  right: -612px;
-}
-.txt-p p,
-.txt-s span {
-  margin: 0; /* 기본 여백 제거 */
-  padding: 0; /* 기본 패딩 제거 */
-}
-
-.txt-p p {
-  margin-right: 20px; /* 텍스트 간 간격 조정 */
-}
-
-.txt-s span {
-  margin-right: 20px; /* 텍스트 간 간격 조정 */
-}
-/* 위 끝 */
-
-/* 아래 */
-.img-innr {
-  position: relative;
-  display: flex;
-  top: 230px;
-  left: -50px;
-}
-/* 이미지 */
-.img-b img {
-  position: relative;
-  left: 150px;
-  width: 250px;
-  height: 250px;
-  display: flex;
-}
-
-/* #image6{
-  position: relative;
-  left: -60px;
-  width: 25%;
-  height: auto;
-  display: none;
-  background-color: #fff;
-}
-#image7{
-  position: relative;
-  width: 10%;
-  height: auto;
-  top: -500px;
-  display: none;
-  background-color: #fff;
-}
-#image8{
-  position: relative;
-  width: 10%;
-  height: auto;
-  top: -500px;
-  display: none;
-  background-color: #fff;
-}
-#image9{
-  display: none;
-  background-color: #fff;
-}
-#image10{
-  display: none;
-  background-color: #fff;
-} */
-
-.img-innr button {
-  position: relative;
-  /* display: block; */
-  top: 215px;
-  left: -90px;
-}
-/* 텍스트 */
-.txt-pp,
-.txt-ss {
-  display: flex; /* 내부 요소들을 수평으로 배치 */
-  /* flex-direction: column; */
-  position: absolute; /* 개별 위치 조정 가능 */
-  margin-bottom: -10px;
-}
-
-.txt-pp {
-  position: relative;
-  /* top: 200px; */
-  left: 50px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-}
-.p6 {
-  position: relative;
-  top: 500px;
-  left: 50px;
-}
-.p7 {
-  position: relative;
-  top: 500px;
-  left: 350px;
-}
-.p8 {
-  position: relative;
-  top: 500px;
-  left: 605px;
-}
-.p9 {
-  position: relative;
-  top: 500px;
-  left: 860px;
-}
-.p10 {
-  position: relative;
-  top: 500px;
-  left: 1093px;
-}
-
-.txt-ss {
-  top: 200px; /* 상단 위치 */
-  left: 200px; /* 왼쪽 위치 */
+  top: 620px;
+  left: 80px;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
-.s6 {
-  position: relative;
-  top: 320px;
-  left: -100px;
-}
-.s7 {
-  position: relative;
-  top: 320px;
-  left: 150px;
-}
-.s8 {
-  position: relative;
-  top: 320px;
-  left: 285px;
-}
-.s9 {
-  position: relative;
-  top: 320px;
-  left: 440px;
-}
-.s10 {
-  position: relative;
-  top: 320px;
-  left: 690px;
-}
 
-/* .txt-pp p,
-.txt-ss span {
-  margin: 0;
-  padding: 0;
-} */
-
-.txt-pp p {
-  margin-right: 20px; /* 텍스트 간 간격 조정 */
+.txt7 {
+  position: relative;
+  top: 570px;
+  left: 24%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
-
-.txt-ss span {
-  margin-right: 20px; /* 텍스트 간 간격 조정 */
+.txt8 {
+  position: relative;
+  top: 520px;
+  left: 44%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
-
-button {
-  width: 100px;
-  height: 30px;
-  background-color: white; /* 배경색을 흰색으로 설정 */
-  color: black; /* 글자색을 검정으로 설정 */
-  border: 1px solid black; /* 테두리를 검정색으로 설정 */
-  /* padding: 10px 20px; */
-  border-radius: 10px; /* 모서리를 둥글게 설정 */
-  font-size: 10px; /* 글자 크기 설정 */
-  cursor: pointer; /* 커서 모양을 포인터로 설정 */
-  outline: none; /* 포커스 시 생기는 외곽선 제거 */
-  transition: background-color 0.3s ease; /* 배경색 전환 효과 추가 */
-  text-align: center;
+.txt9 {
+  position: relative;
+  top: 470px;
+  left: 64%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
-
-button:hover {
-  background-color: #f0f0f0; /* 마우스 오버 시 배경색을 약간 회색으로 변경 */
+.txt10 {
+  position: relative;
+  top: 420px;
+  left: 84%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
