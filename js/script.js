@@ -36,11 +36,10 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
-// function toggleImage() {
-//   var img = document.getElementById("image");
-//   var button = document.querySelector("button");
+// function toggleImage(imageId, button) {
+//   var img = document.getElementById(imageId);
 
-//   if (img.style.display === "none") {
+//   if (img.style.display === "none" || img.style.display === "") {
 //     img.style.display = "block"; // 이미지 보이기
 //     button.textContent = "이미지 숨기기"; // 버튼 텍스트 변경
 //   } else {
@@ -48,13 +47,21 @@ document.addEventListener("mousemove", (e) => {
 //     button.textContent = "이미지 보이기"; // 버튼 텍스트 변경
 //   }
 // }
-
 function toggleImage(imageId, button) {
   var img = document.getElementById(imageId);
 
   if (img.style.display === "none" || img.style.display === "") {
     img.style.display = "block"; // 이미지 보이기
     button.textContent = "이미지 숨기기"; // 버튼 텍스트 변경
+
+    // 새 창에서 이미지 열기
+    var newWindow = window.open(img.src, "_blank", "width=800,height=600");
+
+    // 새 창이 닫히면 버튼 텍스트를 "이미지 보이기"로 변경
+    newWindow.onbeforeunload = function () {
+      img.style.display = "none"; // 이미지 숨기기
+      button.textContent = "이미지 보이기"; // 버튼 텍스트 변경
+    };
   } else {
     img.style.display = "none"; // 이미지 숨기기
     button.textContent = "이미지 보이기"; // 버튼 텍스트 변경

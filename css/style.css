@@ -336,7 +336,7 @@ justify-content: center;
   display: flex;
   width: 100%;
   height: 100vh;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   justify-content: space-around;
 }
 #appdesign h1 {
@@ -366,7 +366,7 @@ justify-content: center;
   /* align-items: center; */
   /* text-align: center; */
 }
-
+/* 디자인 */
 #design {
   position: relative;
   background-color: #7ca9e8;
@@ -386,11 +386,12 @@ justify-content: center;
 /* 위 */
 .img-inner {
   position: relative;
-  top: 200px;
+  top: 150px;
+  left: -50px;
   display: flex;
 }
 /* 이미지조정 */
-#image3 {
+/* #image3 {
   position: relative;
   width: 25%;
   height: auto;
@@ -428,13 +429,13 @@ justify-content: center;
 }
 #image5 {
   position: relative;
-  width: 20%;
+  width: 10%;
   height: auto;
-  left: -230px;
-  top: -50px;
+  left: -80px;
+  top: -80px;
   display: none;
   background-color: #fff;
-}
+} */
 
 .img-A img {
   position: relative;
@@ -463,30 +464,70 @@ justify-content: center;
 
 .txt-p {
   position: relative;
-  top: 200px; /* 상단 위치 */
-  left: 50px; /* 왼쪽 위치 */
+  /* top: 200px; */
+  left: 50px;
   color: #fff;
   font-size: 15px;
   font-weight: 500;
 }
 .p1 {
   position: relative;
-  top: 280px;
+  top: 430px;
+  left: 50px;
+}
+.p2 {
+  position: relative;
+  top: 430px;
+  left: 320px;
+}
+.p3 {
+  position: relative;
+  top: 430px;
+  left: 515px;
+}
+.p4 {
+  position: relative;
+  top: 430px;
+  left: 780px;
+}
+.p5 {
+  position: relative;
+  top: 430px;
+  left: 1065px;
 }
 
 .txt-s {
-  top: 200px; /* 상단 위치 */
-  left: 200px; /* 왼쪽 위치 */
+  /* top: 200px; */
+  left: 200px;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .s1 {
   position: relative;
-  top: 300px;
-  left: -150px;
+  top: 450px;
+  left: -100px;
 }
-
+.s2 {
+  position: relative;
+  top: 450px;
+  left: 83px;
+}
+.s3 {
+  position: relative;
+  top: 450px;
+  left: 220px;
+}
+.s4 {
+  position: relative;
+  top: 450px;
+  left: 490px;
+}
+.s5 {
+  position: relative;
+  top: 450px;
+  right: -612px;
+}
 .txt-p p,
 .txt-s span {
   margin: 0; /* 기본 여백 제거 */
@@ -506,8 +547,10 @@ justify-content: center;
 .img-innr {
   position: relative;
   display: flex;
-  top: 200px;
+  top: 230px;
+  left: -50px;
 }
+/* 이미지 */
 .img-b img {
   position: relative;
   left: 150px;
@@ -515,11 +558,134 @@ justify-content: center;
   height: 250px;
   display: flex;
 }
+
+/* #image6{
+  position: relative;
+  left: -60px;
+  width: 25%;
+  height: auto;
+  display: none;
+  background-color: #fff;
+}
+#image7{
+  position: relative;
+  width: 10%;
+  height: auto;
+  top: -500px;
+  display: none;
+  background-color: #fff;
+}
+#image8{
+  position: relative;
+  width: 10%;
+  height: auto;
+  top: -500px;
+  display: none;
+  background-color: #fff;
+}
+#image9{
+  display: none;
+  background-color: #fff;
+}
+#image10{
+  display: none;
+  background-color: #fff;
+} */
+
 .img-innr button {
   position: relative;
   /* display: block; */
   top: 215px;
   left: -90px;
+}
+/* 텍스트 */
+.txt-pp,
+.txt-ss {
+  display: flex; /* 내부 요소들을 수평으로 배치 */
+  /* flex-direction: column; */
+  position: absolute; /* 개별 위치 조정 가능 */
+  margin-bottom: -10px;
+}
+
+.txt-pp {
+  position: relative;
+  /* top: 200px; */
+  left: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.p6 {
+  position: relative;
+  top: 500px;
+  left: 50px;
+}
+.p7 {
+  position: relative;
+  top: 500px;
+  left: 350px;
+}
+.p8 {
+  position: relative;
+  top: 500px;
+  left: 605px;
+}
+.p9 {
+  position: relative;
+  top: 500px;
+  left: 860px;
+}
+.p10 {
+  position: relative;
+  top: 500px;
+  left: 1093px;
+}
+
+.txt-ss {
+  top: 200px; /* 상단 위치 */
+  left: 200px; /* 왼쪽 위치 */
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.s6 {
+  position: relative;
+  top: 320px;
+  left: -100px;
+}
+.s7 {
+  position: relative;
+  top: 320px;
+  left: 150px;
+}
+.s8 {
+  position: relative;
+  top: 320px;
+  left: 285px;
+}
+.s9 {
+  position: relative;
+  top: 320px;
+  left: 440px;
+}
+.s10 {
+  position: relative;
+  top: 320px;
+  left: 690px;
+}
+
+/* .txt-pp p,
+.txt-ss span {
+  margin: 0;
+  padding: 0;
+} */
+
+.txt-pp p {
+  margin-right: 20px; /* 텍스트 간 간격 조정 */
+}
+
+.txt-ss span {
+  margin-right: 20px; /* 텍스트 간 간격 조정 */
 }
 
 button {
