@@ -497,6 +497,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -10px;
+  margin-bottom: 10px;
 }
 
 .img1 {
@@ -516,6 +517,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 
 .img1:hover {
@@ -539,6 +541,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 .img2:hover {
   transform: scale(1.1);
@@ -560,6 +563,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 
 .img3:hover {
@@ -583,6 +587,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 .img4:hover {
   transform: scale(1.1);
@@ -604,6 +609,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 .img5:hover {
   transform: scale(1.1);
@@ -625,6 +631,7 @@ justify-content: center;
   height: auto;
   top: -20px;
   left: -25px;
+  margin-bottom: 10px;
 }
 .img6:hover {
   transform: scale(1.1);
@@ -646,6 +653,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -20px;
+  margin-bottom: 10px;
 }
 .img7:hover {
   transform: scale(1.1);
@@ -667,6 +675,7 @@ justify-content: center;
   height: auto;
   top: 0px;
   left: -50px;
+  margin-bottom: 10px;
 }
 .img8:hover {
   transform: scale(1.1);
@@ -688,6 +697,7 @@ justify-content: center;
   height: auto;
   top: 25px;
   left: 75px;
+  margin-bottom: 10px;
 }
 .img9:hover {
   transform: scale(1.1);
@@ -695,48 +705,48 @@ justify-content: center;
 
 .txt1 {
   position: relative;
-  top: 480px;
-  left: 80px;
+  top: 490px;
+  left: -40.5%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt2 {
   position: relative;
-  top: 430px;
-  left: 24%;
+  top: 440px;
+  left: -20%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt3 {
   position: relative;
-  top: 380px;
-  left: 44%;
+  top: 390px;
+  left: 0;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt4 {
   position: relative;
-  top: 330px;
-  left: 64%;
+  top: 340px;
+  left: 20%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt5 {
   position: relative;
-  top: 280px;
-  left: 84%;
+  top: 290px;
+  left: 40%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt6 {
   position: relative;
-  top: 620px;
-  left: 80px;
+  top: 658px;
+  left: -40.5%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
@@ -744,33 +754,40 @@ justify-content: center;
 
 .txt7 {
   position: relative;
-  top: 570px;
-  left: 24%;
+  top: 605px;
+  left: -20%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt8 {
   position: relative;
-  top: 520px;
-  left: 44%;
+  top: 553px;
+  left: 0;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt9 {
   position: relative;
-  top: 470px;
-  left: 64%;
+  top: 510px;
+  left: 20%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
 }
 .txt10 {
   position: relative;
-  top: 420px;
-  left: 84%;
+  top: 469px;
+  left: 40%;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
+}
+.txt {
+  text-align: center;
+}
+.ttt {
+  font-weight: 400;
+  font-size: 16px;
 }
