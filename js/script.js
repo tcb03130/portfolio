@@ -36,6 +36,16 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.querySelector(".cursor");
+  if (cursor) {
+    const mouseX = e.pageX + 10; // 커서 이미지의 x좌표
+    const mouseY = e.pageY + 10; // 커서 이미지의 y좌표
+    cursor.style.left = `${mouseX}px`;
+    cursor.style.top = `${mouseY}px`;
+  }
+});
+
 function openImageInFullscreen(imageUrl) {
   const fullscreenDiv = document.getElementById("fullscreen-image");
   const fullscreenImg = document.getElementById("fullscreen-img");
