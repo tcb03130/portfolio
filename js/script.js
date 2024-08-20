@@ -36,34 +36,14 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
-// function toggleImage(imageId, button) {
-//   var img = document.getElementById(imageId);
+function openImageInFullscreen(imageUrl) {
+  const fullscreenDiv = document.getElementById("fullscreen-image");
+  const fullscreenImg = document.getElementById("fullscreen-img");
 
-//   if (img.style.display === "none" || img.style.display === "") {
-//     img.style.display = "block"; // 이미지 보이기
-//     button.textContent = "이미지 숨기기"; // 버튼 텍스트 변경
-//   } else {
-//     img.style.display = "none"; // 이미지 숨기기
-//     button.textContent = "이미지 보이기"; // 버튼 텍스트 변경
-//   }
-// }
-function toggleImage(imageId, button) {
-  var img = document.getElementById(imageId);
+  fullscreenImg.src = imageUrl;
+  fullscreenDiv.style.display = "flex";
 
-  if (img.style.display === "none" || img.style.display === "") {
-    img.style.display = "block"; // 이미지 보이기
-    button.textContent = "이미지 숨기기"; // 버튼 텍스트 변경
-
-    // 새 창에서 이미지 열기
-    var newWindow = window.open(img.src, "_blank", "width=800,height=600");
-
-    // 새 창이 닫히면 버튼 텍스트를 "이미지 보이기"로 변경
-    newWindow.onbeforeunload = function () {
-      img.style.display = "none"; // 이미지 숨기기
-      button.textContent = "이미지 보이기"; // 버튼 텍스트 변경
-    };
-  } else {
-    img.style.display = "none"; // 이미지 숨기기
-    button.textContent = "이미지 보이기"; // 버튼 텍스트 변경
-  }
+  fullscreenDiv.onclick = function () {
+    fullscreenDiv.style.display = "none";
+  };
 }
