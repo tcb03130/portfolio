@@ -46,6 +46,22 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
+// function openImageInFullscreen(imageUrl) {
+//   const fullscreenDiv = document.getElementById("fullscreen-image");
+//   const fullscreenImg = document.getElementById("fullscreen-img");
+
+//   fullscreenImg.src = imageUrl;
+//   fullscreenDiv.style.display = "flex";
+
+//   fullscreenDiv.onclick = function () {
+//     fullscreenDiv.style.display = "none";
+//   };
+// }
+
+// function openImageInFullscreen(url) {
+//   window.open(url, "_blank");
+// }
+
 function openImageInFullscreen(imageUrl) {
   const fullscreenDiv = document.getElementById("fullscreen-image");
   const fullscreenImg = document.getElementById("fullscreen-img");

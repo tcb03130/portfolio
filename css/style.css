@@ -389,30 +389,6 @@ justify-content: center;
   font-size: 50px;
 }
 
-/* 첫 번째 이미지 */
-/* .first-image {
-  position: absolute;
-  top: 0%;
-  left: 10%;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 50px;
-  background-color: #fff;
-} */
-
-/* 두 번째 이미지 */
-/* .second-image {
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 50px;
-  background-color: #fff;
-} */
-
 /* 세 번째 이미지 */
 .third-image {
   position: absolute;
@@ -425,12 +401,68 @@ justify-content: center;
   background-color: #fff;
 }
 
+/* 공통 스타일 */
+.espoir,
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+.espoir:hover,
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover,
+.img5:hover,
+.img6:hover,
+.img7:hover,
+.img8:hover,
+.img9:hover {
+  transform: scale(1.1);
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.espoir:hover .hover-text,
+.img1:hover .hover-text,
+.img2:hover .hover-text,
+.img3:hover .hover-text,
+.img4:hover .hover-text,
+.img5:hover .hover-text,
+.img6:hover .hover-text,
+.img7:hover .hover-text,
+.img8:hover .hover-text,
+.img9:hover .hover-text {
+  opacity: 1;
+}
+
 /* 모든 espoir 이미지를 위한 공통 스타일 */
 .espoir img {
   transform: scale(0.13);
   transform-origin: left top;
   position: absolute;
-  /* top: -27%; */
 }
 
 /* 전체화면 이미지 스타일 */
@@ -790,4 +822,216 @@ justify-content: center;
 .ttt {
   font-weight: 400;
   font-size: 16px;
+}
+
+/* 반응형 */
+/* 기본 스타일은 그대로 유지 */
+
+@media screen and (max-width: 1024px) {
+  /* 1024px 이하 해상도에 대한 스타일 */
+  body {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 100%;
+    height: 60px;
+  }
+  .name p {
+    font-size: 28px;
+  }
+  .banner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header {
+    font-size: 45px;
+  }
+
+  .header p {
+    font-size: 35px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .maimg {
+    left: 50px;
+  }
+
+  .maimg img {
+    width: 250px;
+    height: 350px;
+  }
+
+  .introduction,
+  .skill,
+  .eduation,
+  .experience {
+    top: -300px;
+    left: 10%;
+  }
+
+  .skillinner {
+    left: -300px;
+  }
+
+  .img-text img,
+  .img-app img,
+  .espoir img {
+    transform: scale(0.1);
+  }
+
+  .img-text span,
+  .img-app span {
+    font-size: 28px;
+  }
+
+  .txt1,
+  .txt2,
+  .txt3,
+  .txt4,
+  .txt5,
+  .txt6,
+  .txt7,
+  .txt8,
+  .txt9,
+  .txt10 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 768px 이하 해상도에 대한 스타일 */
+  .name p {
+    font-size: 24px;
+  }
+
+  .header {
+    font-size: 40px;
+  }
+
+  .header p {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .maimg {
+    left: 100px;
+  }
+
+  .maimg img {
+    width: 300px;
+    height: 500px;
+  }
+
+  .introduction,
+  .skill,
+  .eduation,
+  .experience {
+    top: -250px;
+    left: 5%;
+  }
+
+  .skillinner {
+    left: -250px;
+  }
+
+  .img-text img,
+  .img-app img,
+  .espoir img {
+    transform: scale(0.08);
+  }
+
+  .img-text span,
+  .img-app span {
+    font-size: 26px;
+  }
+
+  .txt1,
+  .txt2,
+  .txt3,
+  .txt4,
+  .txt5,
+  .txt6,
+  .txt7,
+  .txt8,
+  .txt9,
+  .txt10 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* 320px 이하 해상도에 대한 스타일 */
+  .name p {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 35px;
+  }
+
+  .header p {
+    font-size: 25px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+
+  .maimg {
+    left: 50px;
+  }
+
+  .maimg img {
+    width: 250px;
+    height: 400px;
+  }
+
+  .introduction,
+  .skill,
+  .eduation,
+  .experience {
+    top: -200px;
+    left: 2%;
+  }
+
+  .skillinner {
+    left: -200px;
+  }
+
+  .img-text img,
+  .img-app img,
+  .espoir img {
+    transform: scale(0.05);
+  }
+
+  .img-text span,
+  .img-app span {
+    font-size: 22px;
+  }
+
+  .txt1,
+  .txt2,
+  .txt3,
+  .txt4,
+  .txt5,
+  .txt6,
+  .txt7,
+  .txt8,
+  .txt9,
+  .txt10 {
+    font-size: 14px;
+  }
 }
